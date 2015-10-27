@@ -11,7 +11,7 @@
 		}
 		td.promocell p {
 			color:#e1d8c1;
-			font-size:16px;
+			font-size:16px;u
 			line-height:26px;
 			font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
 			margin-top:0;
@@ -149,7 +149,7 @@
 												@endif
 
 												@if (isset($unsubscribe))
-													<p style="color:#c9c9c9;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">{{ $unsubscribe }}</p>
+													<p style="color:#c9c9c9;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">{!! $unsubscribe !!}</p>
 												@endif
 
 											</td>
