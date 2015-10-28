@@ -97,25 +97,27 @@
 
 <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#e4e4e4">
 	<tr>
-		<td bgcolor="#e4e4e4" width="100%">
+		<td bgcolor="{{ $backgroundColor or '#e4e4e4' }}" width="100%">
 
-			<table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="table">
+			<table width="{{ $width or '600' }}" cellpadding="0" cellspacing="0" border="0" align="center" class="table">
 				<tr>
 					<td width="600" class="cell">
 
-						<table width="600" cellpadding="0" cellspacing="0" border="0" class="table">
-							<tr>
-								<td width="250" bgcolor="#e4e4e4" class="logocell">
-									<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="20" class="hide">
-									<br class="hide">
-									@if (isset($logo))
-										<img src="{{ $logo['path'] }}" width="{{ $logo['width'] }}" height="{{ $logo['height'] }}" alt="{{ $senderName or '' }}" style="-ms-interpolation-mode:bicubic;">
-									@endif
-									<br>
-									<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="10" class="hide"><br class="hide"></td>
-								<td align="right" width="350" class="hide" style="color:#a6a6a6;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-shadow: 0 1px 0 #ffffff;" valign="top" bgcolor="#e4e4e4"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="63"><br></td>
-							</tr>
-						</table>
+						@if(!isset($hideLogoBlock))
+							<table width="600" cellpadding="0" cellspacing="0" border="0" class="table">
+								<tr>
+									<td width="250" bgcolor="#e4e4e4" class="logocell">
+										<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="20" class="hide">
+										<br class="hide">
+										@if (isset($logo))
+											<img src="{{ $logo['path'] }}" width="{{ $logo['width'] }}" height="{{ $logo['height'] }}" alt="{{ $senderName or '' }}" style="-ms-interpolation-mode:bicubic;">
+										@endif
+										<br>
+										<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="10" class="hide"><br class="hide"></td>
+									<td align="right" width="350" class="hide" style="color:#a6a6a6;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-shadow: 0 1px 0 #ffffff;" valign="top" bgcolor="#e4e4e4"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="63"><br></td>
+								</tr>
+							</table>
+						@endif
 
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="15" class="divider"><br>
 
