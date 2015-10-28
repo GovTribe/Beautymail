@@ -117,9 +117,10 @@
 									<td align="right" width="350" class="hide" style="color:#a6a6a6;font-size:12px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-shadow: 0 1px 0 #ffffff;" valign="top" bgcolor="#e4e4e4"><img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="63"><br></td>
 								</tr>
 							</table>
-						@endif
 
 						<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="15" class="divider"><br>
+
+						@endif
 
 						@section('content')
 						@show
@@ -128,9 +129,10 @@
 				</tr>
 			</table>
 
-			<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="25" class="divider"><br>
-
 			@if (!isset($hideFooter))
+
+				<img border="0" src="{{ Request::getSchemeAndHttpHost() }}/vendor/beautymail/assets/images/widgets/spacer.gif" width="1" height="25" class="divider"><br>
+
 				<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f2f2">
 					<tr>
 						<td>
@@ -204,3 +206,4 @@
 
 </body>
 </html>
+ 
